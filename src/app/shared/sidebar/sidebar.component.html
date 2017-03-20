@@ -1,0 +1,38 @@
+<nav class="navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-left" type="button" (click)="sidebarCollapsed = !sidebarCollapsed" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<div [collapse]="sidebarCollapsed" class="sidebar-collapse">
+  <ul class="sidebar-inverse-nav bg-inverse">
+    <ng-container *ngFor="let item of menuList">
+      <li class="side-item" *ngIf="item.children.length === 0">
+        <a [routerLink]="[item.link]" [routerLinkActive]="['active-link']" class="side-link">
+          <i class="{{item.glyph}}"></i> &nbsp; {{item.name}}
+        </a>
+      </li>
+      <li class="side-item" *ngIf="item.children.length > 0">
+        <a [routerLink]="['components']" [routerLinkActive]="['router-link-active']" class="side-link" (click)="item.collapse = !item.collapse">
+          <i class="fa fa-plus"></i> &nbsp; {{item.name}}
+          <i *ngIf="item.collapse" class="{{subMenuGlyphDown}} float-right" aria-hidden="true"></i>
+          <i *ngIf="!item.collapse" class="{{subMenuGlyphUp}} float-right" aria-hidden="true"></i>
+        </a>
+        <div [collapse]="item.collapse">
+          <ul>
+            <li class="sub-item" *ngFor="let child of item.children">
+              <a [routerLink]="[item.link + '/' + child.link]" [routerLinkActive]="['router-link-active']" class="side-link">
+                <i class="{{child.glyph}}"></i> &nbsp; {{child.name}}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ng-container>
+    <li class="side-item">
+      <a class="side-link" target="_blank" href="https://github.com/DouglasWebster/angular-cli-sb2-bs4">
+        GitHub Source
+        </a>
+    </li>
+  </ul>
+</div>

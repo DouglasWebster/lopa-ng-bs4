@@ -1,0 +1,11 @@
+{
+    "data": [
+        {
+            "name": "Dashboard",
+            "link": "home",
+            "glyph": "fa fa-fw fa-dashboard",
+            "children": [],
+            "collapse": false
+        }
+    ]
+}
