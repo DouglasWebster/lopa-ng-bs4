@@ -15,11 +15,13 @@ before_install:
   - sh -e /etc/init.d/xvfb start
   - sleep 3
 
-# branches:
-#   only:
-#     - develop
-#     - /^greenkeeper/.*$/
-#     - codecovTest
+branches:
+  only:
+    - develop
+    - /^greenkeeper/.*$/
+    - /^feature/.*$/
+    - /^release/.*$/
+    - /^hotfix/.*$/
 
 before_script:
   - npm install -g @angular/cli
