@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginModule } from './login/login.module';
-import { SignupModule } from './signup/signup.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 // import { LoginComponent } from './login/login.component';
@@ -19,7 +18,6 @@ const appRoutes: Routes = [
     exports: [
         RouterModule,
         LoginModule,
-        SignupModule,
         DashboardModule
     ]
 })
