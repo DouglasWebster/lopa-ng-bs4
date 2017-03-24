@@ -1,0 +1,25 @@
+<div class="login-page">
+  <div class="col-md-6 offset-md-3">
+    <div class="jumbotron text-center">
+      <login-alert></login-alert>
+      <h1>LOPA</h1>
+      <img src="assets/img/lopaLogo.svg" width="150px" class="user-avatar" />
+      <div *ngIf="currentUser">
+        <h1>Welcome {{currentUser.firstName}}</h1>
+        <p>You are logged into the LOPA APP</p>
+        <p>
+          <a [routerLink]="['/dashboard/home']" class="btn btn-primary">Enter</a>
+          <a [routerLink]="['/login']" class="btn btn-link">Logout</a>
+          <a *ngIf="currentUser.admin" [routerLink]="['/register']" class="btn btn-link">Administration</a>
+        </p>
+      </div>
+      <div *ngIf="!currentUser">
+        <h1>Welcome</h1>
+        <p>Please login to the LOPA APP</p>
+        <p>
+          <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

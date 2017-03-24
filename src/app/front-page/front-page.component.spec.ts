@@ -1,44 +1,37 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
 
 
 import { User } from '../shared/models';
-import { UserService, AlertService, AuthenticationService } from '../shared/services';
+import { UserService, AlertService } from '../shared/services';
+import { FrontPageComponent } from './front-page.component';
 import { AlertComponent } from '../shared/directives/alert/alert.component';
 
-import { RegisterComponent } from './register.component';
-
-describe('RegisterComponent', () => {
-  let component: RegisterComponent;
-  let fixture: ComponentFixture<RegisterComponent>;
+describe('FrontPageComponent', () => {
+  let component: FrontPageComponent;
+  let fixture: ComponentFixture<FrontPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        HttpModule,
-        FormsModule
+        HttpModule
       ],
       declarations: [
-        RegisterComponent,
+        FrontPageComponent,
         AlertComponent
       ],
       providers: [
         UserService,
-        AlertService,
-        AuthenticationService
+        AlertService
       ]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegisterComponent);
+    fixture = TestBed.createComponent(FrontPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

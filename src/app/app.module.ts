@@ -11,7 +11,7 @@ import { BaseRequestOptions } from '@angular/http';
 // import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AlertService, AuthenticationService, UserService } from './shared/services/index';
+import { AlertService, AuthenticationService, UserService } from './shared/services';
 import { LoginGuard } from './shared/guards/login.guard';
 
 

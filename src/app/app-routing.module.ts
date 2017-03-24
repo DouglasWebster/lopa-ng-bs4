@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginModule } from './login/login.module';
+import { FrontPageModule } from './front-page/front-page.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 // import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: '**', redirectTo: '/login', pathMatch: 'full' }
+    { path: '', redirectTo: '/frontpage', pathMatch: 'full' },
+    { path: '**', redirectTo: '/frontpage', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     ],
     exports: [
         RouterModule,
-        LoginModule,
+        FrontPageModule,
         DashboardModule
     ]
 })

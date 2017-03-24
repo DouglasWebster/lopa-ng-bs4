@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { AlertService, AuthenticationService } from '../shared/services/index';
+import { AlertService, AuthenticationService } from '../shared/services';
 import { AlertComponent } from '../shared/directives/alert/alert.component';
 
 @Component({
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.authenticationService.logout();
 
     // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard/home';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/frontpage';
   }
 
   login() {

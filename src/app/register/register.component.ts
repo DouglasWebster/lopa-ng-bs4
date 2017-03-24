@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AlertService, UserService } from '../shared/services/index';
+import { AlertService, UserService } from '../shared/services';
+import { AlertComponent } from '../shared/directives/alert/alert.component';
 
 @Component({
   templateUrl: './register.component.html',
