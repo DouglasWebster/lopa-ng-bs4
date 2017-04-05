@@ -1,14 +1,14 @@
-import { SbadBs4Ng2Page } from './app.po';
+import { LopaPage } from './app.po';
 
-describe('sbad-bs4-ng2 App', () => {
-  let page: SbadBs4Ng2Page;
+describe('LOPA App', () => {
+  let page: LopaPage;
 
   beforeEach(() => {
-    page = new SbadBs4Ng2Page();
+    page = new LopaPage();
   });
 
-  it('should display message saying SB Admin BS 4 Angular2', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('SB Admin BS 4 Angular2');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

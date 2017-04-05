@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class SbadBs4Ng2Page {
+export class LopaPage {
   navigateTo() {
     return browser.get('/');
   }
