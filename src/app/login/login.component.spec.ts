@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { User } from '../shared/models';
-import { UserService, AlertService,AuthenticationService } from '../shared/services';
+import { UserService, AlertService, AuthenticationService } from '../shared/services';
 import { AlertComponent } from '../shared/directives/alert/alert.component';
 import { LoginComponent } from './login.component';
 
