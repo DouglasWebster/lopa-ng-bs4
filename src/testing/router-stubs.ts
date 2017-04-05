@@ -2,7 +2,7 @@
 
 /***********************************
  * Testing doesn't follow normal naming conventions
- * so turn of angular specific linting
+ * so turn off angular specific linting
  * in this file.
  **********************************/
 

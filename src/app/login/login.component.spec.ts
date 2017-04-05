@@ -49,9 +49,8 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have the page header containing 'SB Admin'`, () => {
+  it(`should have the page header containing 'LOPA'`, () => {
     expect(debugEl.query(By.css('h1')).nativeElement.textContent).toContain('LOPA');
-
   });
 
 });
