@@ -8,7 +8,7 @@
 ## 1.1.2
 
 * **bs-components**  
-   1. Split all the ng2-bootstrap components into seperate sub pages with up to 3 demos in each and a link to the full ng2-bootstrap webpage.
+   1. Split all the ngx-bootstrap components into seperate sub pages with up to 3 demos in each and a link to the full ngx-bootstrap webpage.
 
 * **sidebar.component**  
    1. Changed so that it loads its menu items from an assett file then loads any menu items hardcoded in the component.
