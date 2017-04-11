@@ -79,19 +79,4 @@ describe('LoginComponent', () => {
     const btn = debugEl.queryAll(By.css('.btn'))[1];
     expect(btn.nativeElement.innerText).toContain('Register');
   });
-
-  it('should notify the user if Login is pressed without a user name being entered', () => {
-    const btn = debugEl.queryAll(By.css('.btn'))[0];
-    console.log('Login Pressed using button: ', btn);
-    click(btn);
-    fixture.detectChanges();
-    const form = fixture.debugElement.query(By.css('form'));
-    form.triggerEventHandler('submit', null);
-    fixture.detectChanges();
-    const msg = debugEl.queryAll(By.css('.help-block'))[0];
-    console.log('help block: ', msg);
-
-    expect(msg.nativeElement.innerText).toContain('Register', 'Wrong message to user');
-  });
-
 });

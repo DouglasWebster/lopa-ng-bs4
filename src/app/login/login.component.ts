@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log('Login button pressed');
-    
+
     this.loading = true;
     this.authenticationService.login(this.model.username, this.model.password)
       .subscribe(
