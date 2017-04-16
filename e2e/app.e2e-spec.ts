@@ -7,8 +7,8 @@ describe('LOPA App', () => {
     page = new LopaPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display heading saying LOPA', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('LOPA');
   });
 });
