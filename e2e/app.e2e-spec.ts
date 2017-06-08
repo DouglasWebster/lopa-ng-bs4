@@ -7,8 +7,10 @@ describe('LOPA App', () => {
     page = new LopaPage();
   });
 
-  it('should display heading saying LOPA', () => {
+  it('should display heading saying LOPA', done => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('LOPA');
+    page.getParagraphText()
+      .then(msg => expect(msg).toEqual('LOPA'))
+      .then(done, done.fail);
   });
 });
