@@ -1,4 +1,4 @@
-language: node_js
+﻿language: node_js
 node_js:
   - "6.9"
 
@@ -23,13 +23,13 @@ branches:
     - /^feature/.*$/
     - /^release/.*$/
     - /^hotfix/.*$/
+    - codecovTest
 
 before_script:
 
 script:
-  - ng lint
-  - ng test -sr
-  - ng test -sr -cc
+  - ng lint --type-check
+  - ng test --no-progress -sr -cc
 
 after_success:
   - ./node_modules/.bin/codecov
