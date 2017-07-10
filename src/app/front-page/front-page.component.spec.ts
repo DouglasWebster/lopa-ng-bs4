@@ -13,7 +13,7 @@ import { AlertComponent } from '../shared/directives/alert/alert.component';
 describe('FrontPageComponent', () => {
   let component: FrontPageComponent;
   let fixture: ComponentFixture<FrontPageComponent>;
- 
+
   const fakeUsers = '[{"firstName":"Micky","lastName":"Mouse","userName":"mMouse",'
     + '"password":"Password1","admin":true,"id":1},{"firstName":"Daffy","lastName":"Duck",'
     + '"userName":"dDuck","password":"Password2","admin":false,"id":2}]'
